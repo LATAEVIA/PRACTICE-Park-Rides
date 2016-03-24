@@ -1,13 +1,14 @@
 $(document).ready(function() {
 
   $("form#aform").submit(function(event){
-    var height = $("input#rides").val();
     event.preventDefault();
-    if (height >= 48) {
+    var height = $("#rides").val();
+    if (height >= 36) {
       $('#roller').addClass("highlight");
+      $('.andUp').addClass("highlight");
     } else {
-      $('#roller').addClass("bluebkgd");
+       $('.andUp').addClass("bluebkgd");
+       $('#roller').addClass("bluebkgd");
     }
   });
-
-});
+  });
